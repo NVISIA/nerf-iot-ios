@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     var service : NerfGunService = DefaultNerfGunService()
     
+    let fireDelaySeconds = 3.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,11 +43,22 @@ class ViewController: UIViewController {
     @IBAction func actionToggle(sender: UISwitch) {
         if(sender.on) {
             service.turnOn()
+            NSTimer.scheduledTimerWithTimeInterval(fireDelaySeconds,
+                target:self,selector:Selector("enableBtnFire"),
+                userInfo:nil,
+                repeats: false)
+
         }
         else {
             service.turnOff()
+            print("Disabling fire button")
+            btnFire.enabled = false
         }
-        btnFire.enabled  = sender.on
+    }
+    
+    @objc func enableBtnFire() {
+        print("Enabling fire button")
+        btnFire.enabled = true
     }
 
 }
