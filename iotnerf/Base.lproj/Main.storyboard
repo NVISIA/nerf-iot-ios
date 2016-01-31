@@ -17,10 +17,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Click to Fire!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbD-zg-x0d">
-                                <rect key="frame" x="151" y="63" width="233" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbD-zg-x0d">
+                                <rect key="frame" x="236" y="93" width="92" height="58"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekH-QZ-6Ar">
@@ -32,10 +32,23 @@
                                     <action selector="btnFire:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c6Q-q0-eky"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Esv-3Y-1aY">
+                                <rect key="frame" x="258" y="349" width="51" height="31"/>
+                                <animations/>
+                                <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="thumbTintColor" red="0.82256217277486909" green="0.11862089292874477" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="actionToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="ivn-8Y-log"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btnFire" destination="ekH-QZ-6Ar" id="qmP-j1-n8W"/>
+                        <outlet property="btnToggle" destination="Esv-3Y-1aY" id="Ieq-ZO-XNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

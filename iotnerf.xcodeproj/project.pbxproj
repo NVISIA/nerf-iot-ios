@@ -11,7 +11,6 @@
 		AE1FAA2A1C598A8D006903B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1FAA291C598A8D006903B6 /* ViewController.swift */; };
 		AE1FAA2D1C598A8D006903B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1FAA2B1C598A8D006903B6 /* Main.storyboard */; };
 		AE1FAA2F1C598A8D006903B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE1FAA2E1C598A8D006903B6 /* Assets.xcassets */; };
-		AE1FAA321C598A8D006903B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE1FAA301C598A8D006903B6 /* LaunchScreen.storyboard */; };
 		AE1FAA3D1C598A8D006903B6 /* iotnerfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1FAA3C1C598A8D006903B6 /* iotnerfTests.swift */; };
 		AE1FAA481C598A8D006903B6 /* iotnerfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1FAA471C598A8D006903B6 /* iotnerfUITests.swift */; };
 		AE1FAA571C598DE1006903B6 /* red-button-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = AE1FAA551C598DE1006903B6 /* red-button-pressed.png */; };
@@ -67,7 +66,6 @@
 		AE1FAA291C598A8D006903B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE1FAA2C1C598A8D006903B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE1FAA2E1C598A8D006903B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AE1FAA311C598A8D006903B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE1FAA331C598A8D006903B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE1FAA381C598A8D006903B6 /* iotnerfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iotnerfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE1FAA3C1C598A8D006903B6 /* iotnerfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iotnerfTests.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				AE1FAA551C598DE1006903B6 /* red-button-pressed.png */,
 				AE1FAA561C598DE1006903B6 /* red-button.png */,
 				AE1FAA2E1C598A8D006903B6 /* Assets.xcassets */,
-				AE1FAA301C598A8D006903B6 /* LaunchScreen.storyboard */,
 				AE1FAA331C598A8D006903B6 /* Info.plist */,
 				AE1FAA861C599EA5006903B6 /* NerfGunService.swift */,
 				AE1FAA891C599EE4006903B6 /* DefaultNerfGunService.swift */,
@@ -319,7 +316,6 @@
 			files = (
 				AE1FAA571C598DE1006903B6 /* red-button-pressed.png in Resources */,
 				AE1FAA581C598DE1006903B6 /* red-button.png in Resources */,
-				AE1FAA321C598A8D006903B6 /* LaunchScreen.storyboard in Resources */,
 				AE1FAA2F1C598A8D006903B6 /* Assets.xcassets in Resources */,
 				AE1FAA2D1C598A8D006903B6 /* Main.storyboard in Resources */,
 			);
@@ -415,14 +411,6 @@
 				AE1FAA2C1C598A8D006903B6 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AE1FAA301C598A8D006903B6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE1FAA311C598A8D006903B6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -600,6 +588,7 @@
 				AE1FAA4E1C598A8D006903B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE1FAA4F1C598A8D006903B6 /* Build configuration list for PBXNativeTarget "iotnerfTests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +597,7 @@
 				AE1FAA511C598A8D006903B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE1FAA521C598A8D006903B6 /* Build configuration list for PBXNativeTarget "iotnerfUITests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +606,7 @@
 				AE1FAA541C598A8D006903B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
