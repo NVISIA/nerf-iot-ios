@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     var service : NerfGunService = DefaultNerfGunService()
     
-    let fireDelaySeconds = 3.0
+    let fireDelaySeconds = 1.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
