@@ -26,8 +26,9 @@ class DefaultNerfGunService : NerfGunService {
     }
     
     func initialize() {
-        let hostUrl = NSURL(fileURLWithPath:host)
+        let hostUrl = NSURL(string: host)!
 
+        print("Opening socket to \(hostUrl)")
         self.socket = SocketIOClient(socketURL: hostUrl)
         self.addHandlers()
         self.socket!.connect()
