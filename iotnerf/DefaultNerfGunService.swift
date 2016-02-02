@@ -12,14 +12,6 @@ class DefaultNerfGunService : NerfGunService {
     
     let host = "http://10.10.0.162:3000"
     
-    let fireOnEvent = "fire_on"
-    let firedOffEvent = "fire_off"
-    let connectionEvent = "connect"
-    let nameChangeEvent = "name_changed"
-    let spunUpEvent = "spun_up"
-    let spunDownEvent = "spun_down"
-    let userDisconnectedEvent = "user_disconnected"
-    
     var socket : SocketIOClient?
     
     init() {
@@ -41,44 +33,61 @@ class DefaultNerfGunService : NerfGunService {
     func fire() {
         if(socket != nil) {
             print("Invoking fire...")
-            socket!.emit(fireOnEvent)
+            socket!.emit("fire_on")
         }
     }
     
     func turnOn() {
         if(socket != nil) {
             print("Turning on...")
-            socket!.emit(spunUpEvent)
+            socket!.emit("spin_up")
         }
     }
     
     func turnOff() {
         if(socket != nil) {
             print("Turning off...")
-            socket!.emit(spunDownEvent)
+            socket!.emit("spin_down")
         }
     }
     
+    // Stop firing the gun
+    func stopFire() {
+        if(socket != nil) {
+            print("Stopping fire...")
+            socket!.emit("fire_off")
+        }
+    }
+    
+    // change user name
+    func changeName(name:String) {
+        if(socket != nil) {
+            print("Changing name to \(name)")
+            socket!.emit("name_change")
+        }
+    }
+    
+    
     func addHandlers() {
-        self.socket!.on(fireOnEvent) { data, ack in
+        self.socket!.on("fired_on") { data, ack in
                 print("Fire Event Received")
         }
-        self.socket!.on(firedOffEvent) { data, ack in
+        self.socket!.on("fired_off") { data, ack in
             print("Fire off Event Received")
         }
-        self.socket!.on(connectionEvent) { data, ack in
+        self.socket!.on("new_connection") { data, ack in
             print("Connection Event Received")
         }
-        self.socket!.on(nameChangeEvent) { data, ack in
+        self.socket!.on("name_changed") { data, ack in
             print("NameChange Event Received")
         }
-        self.socket!.on(spunUpEvent) { data, ack in
+        self.socket!.on("spun_up") { data, ack in
             print("Spun Up Event Received")
         }
-        self.socket!.on(spunDownEvent) { data, ack in
+        self.socket!.on("spun_down") { data, ack in
             print("Spun Down Event Received")
         }
-        self.socket!.on(userDisconnectedEvent) { data, ack in
+        self.socket!.on("user_disconnected") { data, ack in
             print("User Disconnected Event Received")
         }
     }

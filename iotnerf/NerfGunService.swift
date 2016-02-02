@@ -26,4 +26,12 @@ protocol NerfGunService {
     
     // Turn off the gun
     func turnOff()
+    
+    // Stop firing the gun
+    func stopFire()
+    
+    // change user name
+    func changeName(name:String)
+    
+    // TODO: Add listener interface to receive socket callbacks
 }
